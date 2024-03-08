@@ -24,12 +24,12 @@ public class InputOutputManager {
 
     public static void chooseShape(){
         System.out.println("What shape you want to count?");
-        System.out.println("1 for square, 2 for triangle, 3 for circle (Type any other key to exit): ");
+        System.out.println("1 for square, 2 for triangle, 3 for circle, 4 for parallelogram (Type any other key to exit): ");
         try {
             choiceOfShape = scanner.nextInt();
         }
         catch (Exception e){
-            System.out.println("Only integers from 1 to 3 are expected.");
+            System.out.println("Only integers from 1 to 4 are expected.");
         }
     }
 
@@ -48,6 +48,12 @@ public class InputOutputManager {
             case 3:
                 System.out.println("Enter the radius length of circle");
                 data1 = scanner.nextDouble();
+                break;
+            case 4:
+                System.out.println("Enter the base length of the parallelogram.");
+                data1 = scanner.nextDouble();
+                System.out.println("Enter the height of the parallelogram.");
+                data2 = scanner.nextDouble();
                 break;
             default:
                 scanner.close();
